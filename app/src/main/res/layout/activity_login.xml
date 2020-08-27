@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Please Enter Credentials"
+        android:id="@+id/textViewCred"
+
+        android:textColor="#000"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:textSize="20sp"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/editTextCaller"
+        android:hint="Your Name"
+        android:layout_below="@id/textViewCred"
+        android:layout_marginTop="50dp"
+        android:layout_marginHorizontal="10dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/editTextReceiver"
+        android:hint="Whom do you want to call?"
+        android:layout_below="@id/editTextCaller"
+        android:layout_marginTop="10dp"
+        android:layout_marginHorizontal="10dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textViewCallType"
+        android:text="Which type of call do you want to perform:"
+        android:layout_below="@id/editTextReceiver"
+        android:textColor="#000"
+        android:layout_marginTop="10dp"
+        android:layout_marginHorizontal="10dp"
+        />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/radioGroup"
+        android:orientation="horizontal"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/textViewCallType">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Normal Call"
+            android:id="@+id/radioNormal"
+            android:layout_weight="1"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Conference Call"
+            android:id="@+id/radioConf"
+            android:layout_weight="1"/>
+
+    </RadioGroup>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Next"
+        android:id="@+id/buttonNext"
+        android:layout_below="@id/radioGroup"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:textColor="#fff"/>
+
+</RelativeLayout>
